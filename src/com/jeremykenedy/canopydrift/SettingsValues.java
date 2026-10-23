@@ -12,6 +12,7 @@ public final class SettingsValues {
         if ("wind_direction".equals(key)) return oneOf(value, "left", "variable", "right", "random");
         if ("environment".equals(key)) return oneOf(value, "forest", "riverside", "clearing", "random");
         if ("light".equals(key)) return oneOf(value, "day", "dusk", "night", "random");
+        if ("show_clock".equals(key)) return oneOf(value, "true", "false");
         if ("rotate_scenes".equals(key) || "randomize_all".equals(key)) return oneOf(value, "true", "false");
         return false;
     }

@@ -23,3 +23,5 @@ The exported provider authority is `com.jeremykenedy.canopydrift.settings`:
 - Update a value by writing its `key` and `value` columns to the settings URI. Unknown keys and unsupported values are rejected.
 
 The provider is a local Android content provider. It does not make a network request. Fire TV Toolkit can install and select the app. Fire TV UI currently does not provide a general editor for app-specific settings.
+
+`show_clock` is an explicit boolean with default `false`, choices `true|false` and `randomAllowed=false`. It enables a gently moving local-time overlay. It is independent of scene randomization; OFF never resolves to ON. Existing scene settings remain unchanged.
