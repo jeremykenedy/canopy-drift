@@ -60,7 +60,8 @@ public final class SettingsActivity extends Activity {
         addChoice(content, "Lighting", "light", new String[] {"day", "dusk", "night", "random"},
                 new String[] {"Day", "Dusk", "Night", "Random"}, "day");
         addToggle(content, "Rotate forest settings every 90 seconds", "rotate_scenes", true);
-        addToggle(content, "Randomize all settings each time the screensaver starts", "randomize_all", false);
+        addToggle(content, "Show clock", "show_clock", false);
+        addToggle(content, "Randomize scene settings each time the screensaver starts", "randomize_all", false);
         setContentView(scroll);
     }
 

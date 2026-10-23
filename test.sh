@@ -8,4 +8,6 @@ javac -source 8 -target 8 -d "$OUT" \
   "$ROOT/src/com/jeremykenedy/canopydrift/SettingsValues.java" \
   "$ROOT/tests/CanopyOptionsTest.java"
 java -ea -cp "$OUT" com.jeremykenedy.canopydrift.CanopyOptionsTest
+javac -source 8 -target 8 -cp "$OUT" -d "$OUT" "$ROOT/tests/ClockVisibilitySettingsTest.java"
+java -ea -cp "$OUT" com.jeremykenedy.canopydrift.ClockVisibilitySettingsTest
 python3 -m unittest -v tests.test_installer

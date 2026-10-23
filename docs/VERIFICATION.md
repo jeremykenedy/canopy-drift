@@ -18,3 +18,9 @@ Emulator results establish Android app behavior only. They do not establish phys
 ## Runtime checks
 
 The release candidate showed continuous preview motion, accepted D-pad setting changes, exposed its settings schema, accepted an Oak selection, and rejected an unsupported wind value. The app requests no Android permissions. The emulator's selected screensaver was restored after confirming installation did not change it. Physical Fire TV, Android TV, and Google TV owners are invited to report idle activation and device-specific results through the repository issue tracker.
+
+## Optional clock regression, 2026-10-22
+
+An isolated Android TV emulator fixture compiled the production scene and provider classes from this change. The combined five-app run passed 123 actual Canvas/provider assertions. It checked the existing appearance default (OFF), explicit ON/OFF under scene randomization, portable boolean storage and schema, and invalid-write retention. OFF produced zero time/date/seconds text draws while the scene remained drawn.
+
+This isolated regression does not establish production DreamService binding, physical-TV performance or acceptance of the existing artwork. Signed release and both-TV installation gates remain pending.
